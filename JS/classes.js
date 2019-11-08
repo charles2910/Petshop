@@ -122,3 +122,11 @@ class pedido{
         this.entrega = entrega;
     }
 }
+
+class Carrinho{
+    constructor() {
+        this.produtos = [];
+        this.valorTotal = 0.00;
+        this.numProd = this.produtos.length;
+    }
+}
