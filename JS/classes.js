@@ -187,5 +187,10 @@ class Banner{
         this.higienePos = 0;
         this.acessoriosPos = 0;
         this.geralPos = 0;
+class Carrinho{
+    constructor() {
+        this.produtos = [];
+        this.valorTotal = 0.00;
+        this.numProd = this.produtos.length;
     }
 }
