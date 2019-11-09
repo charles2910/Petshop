@@ -10,8 +10,8 @@ class Cliente{
         this.senha = senha;
         this.endereco = endereco;
         this.cartao = cartao;
-        this.pets;
-        this.pedidos;
+        this.pets = [];
+        this.pedidos = [];
     }
     addPet(pet){
         this.pets.append(pet);
@@ -118,11 +118,6 @@ class Produto{
              txt+=  '<h2>Por apenas:</h2> <h1>R$ '+(this.preco)+'</h1><h2> à vista</h2><br/>';
         }
         txt+=   '<button onclick="carrinho()" id="btn_carrinho_add"><i class="fa fa-cart-plus"></i> Adicionar ao carrinho</button>';
-        txt+=   '<h3>Consultar prazo e valor do frete</h3>';
-        txt+=   '<div id="pesquisa_cep">';
-        txt+=   '<input type="number" placeholder="999999-999" required>';
-        txt+=   '<button>Ok</button>'
-        txt+=   '</div>';
         txt+=   '</div>';
         return txt;
     }
@@ -187,6 +182,10 @@ class Banner{
         this.higienePos = 0;
         this.acessoriosPos = 0;
         this.geralPos = 0;
+    }
+}
+
+
 class Carrinho{
     constructor() {
         this.produtos = [];

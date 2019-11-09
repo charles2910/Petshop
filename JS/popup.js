@@ -30,3 +30,11 @@ function AssistChat(acao){
         document.getElementById("popupChatDiv").style.display="none";
     }
 }
+
+function servicoPet(acao,id){
+    if(acao){
+        document.getElementById(id).style.display="block";
+    }else{
+        document.getElementById(id).style.display="none";
+    }
+}

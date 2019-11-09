@@ -1,4 +1,4 @@
-function cadastrarUsuario(admin){
+function cadastrarUsuario(admin,att){
     if(document.getElementById("senha1").value === document.getElementById("senha2").value){
         let endereco = new Endereco(
             document.getElementById("cep").value,
@@ -13,7 +13,7 @@ function cadastrarUsuario(admin){
         if(!admin){
             cartao = new Pagamento(
                 document.getElementById("nome_cartao").value,
-                document.getElementById("nmr_cartao").value,
+                document.getElementById("numero_cartao").value,
                 document.getElementById("validade_cartao").value,
                 document.getElementById("cvv").value
             );
@@ -32,30 +32,40 @@ function cadastrarUsuario(admin){
             cartao,
             admin
         );
-        if(writeDb(cliente)){
-            login(cliente.email, cliente.senha);
+        if(!att){
+            if(writeDb(cliente)){
+                login(cliente.email, cliente.senha);
+            }
+        }else{
+            if(attDbCliente(cliente)){
+                alert("Dados alterados com sucesso!");
+            }
         }
     }else{
         window.alert("As senhas devem ser identicas");
     }
 }
 
-function cadastrarProduto(){
+function cadastrarProduto(att){
     let produto = new Produto(
         document.getElementById("nome").value,
         document.getElementById("marca").value,
-        document.getElementById("categoria").value,
-        document.getElementById("departamento").value,
-        document.getElementById("preco").value,
-        document.getElementById("preco_promo").value,
+        (document.getElementById("categoria").value).toLowerCase(),
+        (document.getElementById("departamento").value).toLowerCase(),
+        parseFloat(document.getElementById("preco").value),
+        parseFloat(document.getElementById("preco_promo").value),
         document.getElementById("nome_comp").value,
         document.getElementById("codigo").value,
-        document.getElementById("qtd").value,
+        parseInt(document.getElementById("qtd").value),
         document.getElementById("lote").value,
         document.getElementById("validade").value,
         document.getElementById("desc").value,
         document.getElementById("promo_ativ").value,
-        document.getElementById("imgPath").value
+        "../IMAGES/PRODUTOS/produto.png"
     );
-    writeDbProduto(produto);
+    if(!att){
+        writeDbProduto(produto);
+    }else{
+        attDbProduto(produto);
+    }
 }

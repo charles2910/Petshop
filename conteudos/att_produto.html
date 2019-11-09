@@ -1,6 +1,6 @@
 <div id="conteudo_cadastro_produto">
     <div id="janela_cadastro_produto">
-        <form id="form_produto" onsubmit="cadastrarProduto(false)">
+        <form id="form_produto" onsubmit="cadastrarProduto(true)">
             <div id="cadastro_pt1">
                 <div class="add_imagem">
                     <img src="../IMAGES/PRODUTOS/produto.png">
@@ -49,7 +49,8 @@
                 <textarea id="desc"></textarea required>
             </div>
             <div id="cadastro_botoes">
-                <button value="cria" type ="submit"  id="Cadastrar">Cadastrar</button>
+                <button onclick="deletaProduto()" type ="button" id="deletar">Deletar</button>
+                <button type ="submit" id="Alterar">Alterar</button>
             </div>
         </form>
     </div>

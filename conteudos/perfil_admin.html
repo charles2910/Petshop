@@ -1,15 +1,15 @@
 <div class="conteudo_cadastro">
-    <form onsubmit="cadastrarUsuario(false,false)">
+    <form id="form_cadastro" onsubmit="cadastrarUsuario(true,true)">
         <div class="dados_pessoais">
             <h2>
                 Meus Dados
             </h2>
             <div class="coluna1">
                 <label><i class="fa fa-user"></i> Nome completo</label>
-                <input id="nome_cliente" type="text" placeholder="Nome Sobrenome" required>
+                <input id="nome_cliente" type="text" required>
                 <label><i class="fa fa-mobile-phone"></i> DDD + Celular</label>
-                <input id = "ddd_cel" type="number" placeholder="16" class="nmr_ddd" required>
-                <input type="number" placeholder="999999999" id="celular" required>
+                <input id = "ddd_cel" type="number" class="nmr_ddd" required>
+                <input type="number" id="celular" required>
                 <label><i class="fa fa-calendar"></i> Data de nascimento</label>
                 <input id ="nascimento" type="date" required>
                 <label><i class="fa fa-lock" ></i> Senha</label>
@@ -17,14 +17,14 @@
             </div>
             <div class="coluna2">
                 <label><i class="fa fa-envelope"></i> Email</label>
-                <input id="email" type="email" placeholder="email@email.com" required>
+                <input id="email" type="email" required>
                 <label><i class="fa fa-phone-square"></i> DDD + Telefone</label>
-                <input id="ddd_tel" type="number" placeholder="16" class="nmr_ddd">
-                <input type="number" placeholder="999999999" id="telefone" >
+                <input id="ddd_tel" type="number" class="nmr_ddd">
+                <input type="number" id="telefone" >
                 <label><i class="fa fa-id-card"></i> CPF</label>
-                <input id="cpf" type="number" placeholder="999.999.999-99" required>
+                <input id="cpf" type="number" required>
                 <label><i class="fa fa-lock"></i> Confirmar senha</label>
-                <input id=senha2 type="password">
+                <input id=senha2 type="password" required>
             </div>
         </div>
         <div class="endereco">
@@ -33,9 +33,9 @@
             </h2>
             <div class="coluna1">
                 <label><i class="fa fa-bus"></i> CEP</label>
-                <input id="cep" type="number" placeholder="99999-999" required>
+                <input id="cep" type="number" required>
                 <label><i class="fa fa-address-card-o"></i> Número</label>
-                <input id ="numero_casa" type="text" placeholder="Rua loren ipsun dolor" required>
+                <input id ="numero_casa" type="text" required>
                 <label> Complemento</label>
                 <input id="complemento" type="text">
                 <label><i class="fa fa-institution"></i> Cidade</i></label>
@@ -43,26 +43,13 @@
             </div>
             <div class="coluna2">
                 <label><i class="fa fa-address-card-o"></i> Endereço</label>
-                <input id ="rua" type="text" placeholder="Rua loren ipsun dolor" required>
+                <input id ="rua" type="text" required>
                 <label><i class="fa fa-address-card-o"></i> Bairro</label>
-                <input id="bairro" type="text" placeholder="Loren ispun" required>
+                <input id="bairro" type="text"required>
                 <label>Estado</label>
                 <input id="estado" type="text" required>
             </div>
         </div>
-        <div class="dados_pagamento">
-            <h2>
-                Pagamento
-            </h2>
-            <label><i class="fa fa-user"></i> Nome no cartão</label>
-            <input id="nome_cartao" type="text" placeholder="Nome" required>
-            <label><i class="fa fa-credit-card-alt"></i> Número do cartão</label>
-            <input id="numero_cartao" type="numero" placeholder="9999-9999-9999-9999" required>
-            <label><i class="fa fa-calendar"></i> Data de validade</label>
-            <input id="validade_cartao" type="Date" required>
-            <label>CVV</label>
-            <input id="cvv" type="number" placeholder="999" required>
-        </div>
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Alterar dados</button>
     </form>
 </div>

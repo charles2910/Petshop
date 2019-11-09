@@ -1,5 +1,5 @@
 <div class="conteudo_cadastro">
-    <form onsubmit="cadastrarUsuario(true)">
+    <form id="form_cadastro" onsubmit="cadastrarUsuario(true,false)">
         <div class="dados_pessoais">
             <h2>
                 Meus Dados
@@ -50,6 +50,6 @@
                 <input id="estado" type="text" required>
             </div>
         </div>
-        <button type="submit">Cadastrar</button>
+        <button id="cadastrar" type="submit">Cadastrar</button>
     </form>
 </div>

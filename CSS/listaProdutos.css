@@ -12,7 +12,6 @@
 
 }
 
-
 div.listaProdutos{
     display: flex;
     margin-left: 10%;
@@ -74,6 +73,11 @@ div.listaProdutos aside li{
 }
 
 div.listaProdutos aside li a{
+    text-decoration: none;
+    color:rgb(99, 99, 99);
+}
+
+div.listaProdutos aside a{
     text-decoration: none;
     color:rgb(99, 99, 99);
 }

@@ -105,6 +105,11 @@ div#janela_cadastro_produto div#cadastro_pt1 select{
     width: 90%;
     min-width: 250px;
     padding: 5px 20px 15px 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 div#janela_cadastro_produto textarea{
@@ -147,13 +152,7 @@ div#janela_cadastro_produto div#cadastro_botoes button{
 
 div#janela_cadastro_produto div#cadastro_botoes button#deletar{
     background-color: #f44336;
-    display: none;
 }
-
-div#janela_cadastro_produto div#cadastro_botoes button#Alterar{
-    display: none;
-}
-
 div#janela_cadastro_produto div#cadastro_botoes button:hover {
     opacity:1;
 }
